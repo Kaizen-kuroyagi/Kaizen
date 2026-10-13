@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>KaizenTech — Home</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+          <div class="brand">
+            <div class="logo">T</div>
+            <div>
+              <div>TechMart</div>
+              <div class="muted">Smart gadgets, fair prices</div>
+            </div>
+          </div>
+          <nav>
+            <a href="#">Products</a>
+            <a href="#">Deals</a>
+            <a href="#">Support</a>
+            <a href="Purchasing page.html">Checkout</a>
+            <a href="#">Sign in</a>
+          </nav>
+        </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <h1>Gear up with the latest tech — effortless, reliable, yours.</h1>
+          <p>From noise-cancelling headphones to power-packed laptops, discover thoughtfully curated devices that fit real life and real budgets.</p>
+          <a class="cta" href="#products">Shop Featured</a>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Deal of the week</h3>
+          <p style="color:var(--muted)">Wireless Headphones Pro — 25% off. Free returns.</p>
+          <img src="https://via.placeholder.com/380x220?text=Headphones" alt="Headphones" style="width:100%;border-radius:8px;margin-top:14px">
+        </div>
+      </section>
+
+      <section id="products">
+        <h2 style="margin:0 0 12px">Featured picks</h2>
+        <p style="margin:0 0 18px;color:var(--muted)">Hand-picked gadgets our customers love.</p>
+        <div class="product-grid">
+            <div class="product" data-id="earbuds" data-price="79">
+              <img src="https://via.placeholder.com/220x140?text=Wireless+Earbuds" alt="Earbuds">
+              <h4 style="margin:12px 0 6px">Wireless Earbuds</h4>
+              <div style="color:var(--muted)">$79</div>
+              <button class="cta" style="margin-top:10px" data-add> Add to cart</button>
+            </div>
+            <div class="product" data-id="watch" data-price="159">
+              <img src="https://via.placeholder.com/220x140?text=Smart+Watch" alt="Smart Watch">
+              <h4 style="margin:12px 0 6px">Smart Watch</h4>
+              <div style="color:var(--muted)">$159</div>
+              <button class="cta" style="margin-top:10px" data-add> Add to cart</button>
+            </div>
+            <div class="product" data-id="charger" data-price="29">
+              <img src="https://via.placeholder.com/220x140?text=Portable+Charger" alt="Charger">
+              <h4 style="margin:12px 0 6px">Portable Charger</h4>
+              <div style="color:var(--muted)">$29</div>
+              <button class="cta" style="margin-top:10px" data-add> Add to cart</button>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+        <div>
+          <strong>TechMart</strong>
+          <div style="color:var(--muted);font-size:13px">© 2026 TechMart Inc. — Built for people who love tech.</div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:20px">
+          <div class="social">
+            <a href="https://twitter.com/techmart" aria-label="Twitter">T</a>
+            <a href="https://instagram.com/techmart" aria-label="Instagram">I</a>
+            <a href="https://facebook.com/techmart" aria-label="Facebook">F</a>
+            <a href="https://youtube.com/techmart" aria-label="YouTube">Y</a>
+          </div>
+          <div style="color:var(--muted);font-size:13px">
+            <div>Contact: hello@techmart.inc</div>
+            <div>Phone: (+265 887 360 512)</div>
+            <div>Address: 36 Innovation Way, Blantyre, MW</div>
+          </div>
+          <div style="margin-left:18px">
+            <a href="Purchasing page.html" class="cta" id="view-cart">View cart</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Minimal cart using localStorage
+      const CART_KEY = 'techmart_cart_v1';
+      function loadCart(){ try{ return JSON.parse(localStorage.getItem(CART_KEY))||[] }catch(e){return []} }
+      function saveCart(c){ localStorage.setItem(CART_KEY, JSON.stringify(c)) }
+      function addToCart(id, name, price){ const cart=loadCart(); const found=cart.find(i=>i.id===id); if(found){found.qty+=1}else{cart.push({id,name,price,qty:1})} saveCart(cart); alert(name + ' added to cart') }
+      document.addEventListener('click', e=>{ const btn=e.target.closest('[data-add]'); if(!btn) return; const prod=btn.closest('.product'); addToCart(prod.dataset.id, prod.querySelector('h4').innerText, Number(prod.dataset.price)); });
+    </script>
+  </body>
+</html>
