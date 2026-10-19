@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KaizenTech — Account</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="auth-page">
+
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <a class="logo" href="../Index.html">
+          <img src="../Images/large.png" width="125" alt="KaizenTech">
+        </a>
+        <nav>
+          <ul>
+            <li><a href="../Index.html">Home</a></li>
+            <li><a href="../Purchasing page.html">Products</a></li>
+            <li><a href="#auth">Account</a></li>
+          </ul>
+        </nav>
+        <img src="../Images/Car.png" width="30" height="30" alt="Shopping Cart">
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-section" id="auth">
+    <div class="small-container">
+      <h1>My Account</h1>
+      <p class="auth-intro">Sign in or create an account to get started.</p>
+      <div class="auth-container">
+
+      <div class="auth-box">
+        <h2>Login</h2>
+        <p class="sub">Welcome back — sign in to your account</p>
+        <form action="/login" method="post">
+          <div class="field">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="email" placeholder="jane@example.com" required>
+          </div>
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" placeholder="••••••••" minlength="6" required>
+          </div>
+          <button type="submit" class="btn submit">Login</button>
+        </form>
+      </div>
+
+      <div class="auth-box">
+        <h2>Register</h2>
+        <p class="sub">Create an account for member pricing</p>
+        <form action="/register" method="post">
+          <div class="field">
+            <label for="reg-name">Full name</label>
+            <input type="text" id="reg-name" name="fullname" placeholder="Catori Mayanne" required>
+          </div>
+          <div class="field">
+            <label for="reg-email">Email</label>
+            <input type="email" id="reg-email" name="email" placeholder="catori@example.com" required>
+          </div>
+          <div class="field">
+            <label for="reg-password">Password (min 6 chars)</label>
+            <input type="password" id="reg-password" name="password" placeholder="••••••••" minlength="6" required>
+          </div>
+          <button type="submit" class="btn submit">Create Account</button>
+        </form>
+      </div>
+
+    </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">KaizenTech © 2026</footer>
+
+</body>
+</html>

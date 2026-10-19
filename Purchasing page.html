@@ -3,133 +3,79 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Checkout — TechMart</title>
+    <title>KaizenTech — Checkout</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header>
-      <div class="container nav">
-        <div class="brand">
-          <div class="logo">T</div>
-          <div>
-            <div>TechMart</div>
-            <div class="muted">Smart gadgets, fair prices</div>
-          </div>
+    <header class="header">
+      <div class="container">
+        <div class="navbar">
+          <a class="logo" href="Index.html">
+            <img src="images/large.png" width="125" alt="KaizenTech">
+          </a>
+          <nav>
+            <ul>
+              <li><a href="Index.html">Home</a></li>
+              <li><a href="Purchasing page.html">Products</a></li>
+              <li><a href="electronics.html">Account</a></li>
+            </ul>
+          </nav>
+          <img src="images/car.png" width="30" height="30" alt="Shopping Cart">
         </div>
-        <nav>
-          <a href="Home page.html">Home</a>
-          <a href="#">Products</a>
-          <a href="#">Support</a>
-        </nav>
       </div>
     </header>
 
-    <main class="container" style="padding:40px 0">
-      <h2>Checkout</h2>
-      <div style="display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:18px">
-        <section>
-          <h3>Contact & Shipping</h3>
+    <main class="small-container checkout-page">
+      <h1>Checkout</h1>
+      <div class="checkout-layout">
+        <section class="checkout-card">
           <form>
-            <label style="display:block;margin:8px 0 4px">Full name</label>
-            <input type="text" placeholder="Jane Doe" style="width:100%;padding:10px;border-radius:6px;border:1px solid #ddd">
-
-            <label style="display:block;margin:8px 0 4px">Email</label>
-            <input type="email" placeholder="jane@example.com" style="width:100%;padding:10px;border-radius:6px;border:1px solid #ddd">
-
-            <label style="display:block;margin:8px 0 4px">Address</label>
-            <input type="text" placeholder="123 Market St" style="width:100%;padding:10px;border-radius:6px;border:1px solid #ddd">
-
-                  </div>
-                  
-
-                <h3 style="margin-top:18px">Payment</h3>
-                <label style="display:block;margin:8px 0 4px">Cardholder name</label>
-                <input type="text" placeholder="Jane Doe" style="width:100%;padding:10px;border-radius:6px;border:1px solid #ddd">
-
-                <div style="display:flex;gap:8px">
-                  <div style="flex:2">
-                    <label style="display:block;margin:8px 0 4px">Card number</label>
-                    <input id="card-number" type="text" placeholder="4242 4242 4242 4242" style="width:100%;padding:10px;border-radius:6px;border:1px solid #ddd">
-                  </div>
-                  <div style="flex:1">
-                    <label style="display:block;margin:8px 0 4px">Exp</label>
-                    <input id="card-exp" type="text" placeholder="MM/YY" style="width:100%;padding:10px;border-radius:6px;border:1px solid #ddd">
-                  </div>
-                </div>
-
-                <label style="display:block;margin:8px 0 4px">CVC</label>
-                <input id="card-cvc" type="text" placeholder="123" style="width:100px;padding:10px;border-radius:6px;border:1px solid #ddd">
-
-              </form>
-            </section>
-
-            <aside class="card" id="order-summary">
-              <h3 style="margin-top:0">Your order</h3>
-              <div id="items"></div>
-              <hr>
-              <div style="display:flex;justify-content:space-between;margin:12px 0"><div class="muted">Shipping</div><div id="shipping">$0.00</div></div>
-              <div style="display:flex;justify-content:space-between;font-weight:700;margin-top:10px"><div>Total</div><div id="total">$0.00</div></div>
-              <a href="#" class="cta" id="pay-btn" style="display:block;text-align:center;margin-top:18px">Pay</a>
-            </aside>
-
-          </div>
-        </main>
-
-        <footer>
-          <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
-            <div>
-              <strong>TechMart</strong>
-              <div class="muted">© 2026 TechMart Inc.</div>
+            <h2>Contact &amp; Shipping</h2>
+            <div class="checkout-field">
+              <label for="customer-name">Full name</label>
+              <input id="customer-name" type="text" placeholder="Jane Doe">
+            </div>
+            <div class="checkout-field">
+              <label for="customer-email">Email</label>
+              <input id="customer-email" type="email" placeholder="jane@example.com">
+            </div>
+            <div class="checkout-field">
+              <label for="customer-address">Address</label>
+              <input id="customer-address" type="text" placeholder="123 Market St">
             </div>
 
-            <div style="display:flex;align-items:center;gap:20px">
-              <div class="social">
-                <a href="https://twitter.com/techmart" aria-label="Twitter">T</a>
-                <a href="https://instagram.com/techmart" aria-label="Instagram">I</a>
-                <a href="https://facebook.com/techmart" aria-label="Facebook">F</a>
-                <a href="https://youtube.com/techmart" aria-label="YouTube">Y</a>
+            <h2 class="payment-heading">Payment</h2>
+            <div class="checkout-field">
+              <label for="cardholder-name">Cardholder name</label>
+              <input id="cardholder-name" type="text" placeholder="Jane Doe">
+            </div>
+            <div class="checkout-fields-row">
+              <div class="checkout-field">
+                <label for="card-number">Card number</label>
+                <input id="card-number" type="text" placeholder="4242 4242 4242 4242">
               </div>
-              <div class="muted">
-                <div>hello@techmart.example</div>
-                <div>+1 (555) 321-9876</div>
+              <div class="checkout-field">
+                <label for="card-exp">Exp</label>
+                <input id="card-exp" type="text" placeholder="MM/YY">
               </div>
             </div>
-          </div>
-        </footer>
+            <div class="checkout-field">
+              <label for="card-cvc">CVC</label>
+              <input id="card-cvc" type="text" placeholder="123">
+            </div>
+          </form>
+        </section>
 
-        <script>
-          // Read cart from localStorage and populate order summary
-          const CART_KEY = 'techmart_cart_v1';
-          const shippingCost = 12.99;
+        <aside class="checkout-card order-summary">
+          <h2>Your order</h2>
+          <p>Your cart is empty. Add products to see them here.</p>
+          <hr>
+          <div class="summary-line"><span>Shipping</span><span>$0.00</span></div>
+          <div class="summary-line summary-total"><span>Total</span><span>$0.00</span></div>
+        </aside>
+      </div>
+    </main>
 
-          function money(n){ return '$' + n.toFixed(2); }
-
-          function loadCart(){
-            try{ return JSON.parse(localStorage.getItem(CART_KEY)) || []; }catch(e){return []}
-          }
-
-          function renderOrder(){
-            const itemsEl = document.getElementById('items');
-            const shippingEl = document.getElementById('shipping');
-            const totalEl = document.getElementById('total');
-            const cart = loadCart();
-            itemsEl.innerHTML = '';
-            if(!cart.length){ itemsEl.innerHTML = '<div class="muted">Your cart is empty.</div>'; shippingEl.textContent = money(0); totalEl.textContent = money(0); document.getElementById('pay-btn').style.display='none'; return}
-            let subtotal = 0;
-            cart.forEach(it=>{
-              const row = document.createElement('div');
-              row.style.display='flex'; row.style.justifyContent='space-between'; row.style.margin='12px 0';
-              row.innerHTML = `<div><strong>${it.name}</strong><div class="muted" style="font-size:12px">Qty ${it.qty}</div></div><div>${money(it.price*it.qty)}</div>`;
-              itemsEl.appendChild(row);
-              subtotal += it.price*it.qty;
-            });
-            shippingEl.textContent = money(shippingCost);
-            totalEl.textContent = money(subtotal + shippingCost);
-          }
-
-          document.addEventListener('DOMContentLoaded', renderOrder);
-          document.getElementById('pay-btn').addEventListener('click', function(e){ e.preventDefault(); alert('Payment simulated — thank you!'); localStorage.removeItem(CART_KEY); renderOrder(); });
-        </script>
-
-      </body>
-      </html>
+    <footer class="site-footer">KaizenTech © 2026</footer>
+  </body>
+</html>

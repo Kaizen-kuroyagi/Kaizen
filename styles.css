@@ -95,3 +95,138 @@ p{
    padding-left: 25px;
    padding-right: 25px;
 }
+
+/* Shared account and checkout page styling */
+.auth-section{
+   padding: 50px 0 80px;
+   background: radial-gradient(#f9f9f9,#ED6E33);
+}
+.auth-section h1,
+.checkout-page > h1{
+   margin-bottom: 12px;
+}
+.auth-intro{
+   margin-bottom: 28px;
+}
+.auth-container{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 24px;
+   justify-content: flex-start;
+}
+.auth-box,
+.checkout-card{
+   background: #fff;
+   border: 1px solid #e8e0dc;
+   border-radius: 14px;
+   padding: 28px;
+   box-shadow: 0 8px 24px rgba(86,52,52,.1);
+}
+.auth-box{
+   flex: 1 1 320px;
+   max-width: 480px;
+}
+.auth-box h2,
+.checkout-card h2{
+   margin-bottom: 8px;
+}
+.auth-box .sub{
+   margin-bottom: 20px;
+}
+.field,
+.checkout-field{
+   margin-bottom: 16px;
+}
+.field label,
+.checkout-field label{
+   display: block;
+   margin-bottom: 6px;
+}
+.field input,
+.checkout-field input{
+   width: 100%;
+   padding: 11px 12px;
+   border-radius: 8px;
+   border: 1px solid #ccc;
+   background: #fff;
+   color: #333;
+   font: inherit;
+}
+.field input:focus,
+.checkout-field input:focus{
+   outline: none;
+   border-color: #ED6E33;
+   box-shadow: 0 0 0 3px rgba(237,110,51,.15);
+}
+.auth-page .btn{
+   width: 100%;
+   border: 0;
+   cursor: pointer;
+   font: inherit;
+}
+.auth-page .submit{
+   margin: 8px 0 0;
+}
+.checkout-page{
+   padding-top: 40px;
+   padding-bottom: 60px;
+}
+.checkout-layout{
+   display: grid;
+   grid-template-columns: minmax(0, 1fr) 340px;
+   gap: 28px;
+   margin-top: 22px;
+   align-items: start;
+}
+.checkout-fields-row{
+   display: flex;
+   gap: 12px;
+}
+.checkout-fields-row .checkout-field:first-child{
+   flex: 2;
+}
+.checkout-fields-row .checkout-field:last-child{
+   flex: 1;
+}
+.payment-heading{
+   margin-top: 24px;
+}
+.order-summary p{
+   margin: 12px 0;
+}
+.order-summary hr{
+   border: 0;
+   border-top: 1px solid #e8e0dc;
+   margin: 16px 0;
+}
+.summary-line{
+   display: flex;
+   justify-content: space-between;
+   margin: 12px 0;
+}
+.summary-total{
+   font-weight: 700;
+}
+.site-footer{
+   padding: 24px;
+   text-align: center;
+   color: #555;
+   border-top: 1px solid #eee;
+}
+@media (max-width: 700px){
+   .navbar{
+      flex-wrap: wrap;
+      gap: 12px;
+   }
+   .navbar nav{
+      order: 3;
+      flex-basis: 100%;
+      text-align: center;
+   }
+   .navbar nav ul li{
+      margin: 0 8px;
+   }
+   .checkout-layout{
+      grid-template-columns: 1fr;
+   }
+}
