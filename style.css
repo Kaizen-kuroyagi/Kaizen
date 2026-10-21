@@ -1,0 +1,305 @@
+.product-page-shell {
+  width: 100%;
+  padding: 2rem 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.product-page-shell * {
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.product-page-shell .slider {
+  width: 100%;
+  max-width: 78rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.product-page-shell .slider__stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0f0f0f;
+  border-radius: 8px;
+  overflow: visible;
+}
+
+.product-page-shell .slider__list {
+  position: absolute;
+  inset: 0;
+}
+
+.product-page-shell .slide {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.9s ease-in-out;
+  overflow: hidden;
+}
+
+.product-page-shell .slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.product-page-shell .slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.4) 45%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  pointer-events: none;
+}
+
+.product-page-shell .details {
+  position: absolute;
+  top: 50%;
+  left: 4rem;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 26rem;
+  z-index: 3;
+  opacity: 0;
+}
+
+.product-page-shell .slide.is-active .details {
+  animation: detailsIn 0.9s ease-out 0.4s forwards;
+}
+
+@keyframes detailsIn {
+  from {
+    opacity: 0;
+    filter: blur(14px);
+    transform: translateY(-50%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.product-page-shell .details h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 0.9rem;
+}
+
+.product-page-shell .details p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 1.4rem;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 22rem;
+}
+
+.product-page-shell .details button {
+  padding: 0.7rem 1.4rem;
+  border: 0;
+  background: #fff;
+  color: #222;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.product-page-shell .details button:hover {
+  background: #d9e1ea;
+  transform: translateY(-1px);
+}
+
+.product-page-shell .thumbs {
+  position: absolute;
+  right: -1.5rem;
+  bottom: -1.5rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  z-index: 5;
+  padding-right: 1.5rem;
+}
+
+.product-page-shell .thumb {
+  width: 78px;
+  height: 108px;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 0;
+  border: 2px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.65;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+  transition:
+    width 0.35s ease,
+    height 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.3s ease,
+    border-color 0.25s ease,
+    box-shadow 0.3s ease;
+}
+
+.product-page-shell .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.product-page-shell .thumb:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+.product-page-shell .thumb.is-active {
+  width: 96px;
+  height: 132px;
+  opacity: 1;
+  border-color: #fff;
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
+
+.product-page-shell .thumb:focus-visible {
+  outline: 3px solid #a8b8c8;
+  outline-offset: 3px;
+}
+
+.product-page-shell .controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.product-page-shell .controls button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease,
+              transform 0.2s ease, border-color 0.2s ease;
+}
+
+.product-page-shell .controls button svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.product-page-shell .controls button:hover {
+  background: #fff;
+  color: #222;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.product-page-shell .controls button:focus-visible {
+  outline: 3px solid #a8b8c8;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1000px) {
+  .product-page-shell .details {
+    left: 2rem;
+    max-width: 60%;
+  }
+
+  .product-page-shell .details h1 { font-size: 2rem; }
+  .product-page-shell .details p  { font-size: 0.85rem; }
+
+  .product-page-shell .thumb {
+    width: 60px;
+    height: 84px;
+    border-radius: 12px;
+  }
+
+  .product-page-shell .thumb.is-active {
+    width: 74px;
+    height: 102px;
+  }
+}
+
+@media (max-width: 700px) {
+  .product-page-shell .slider__stage {
+    aspect-ratio: 4 / 5;
+  }
+
+  .product-page-shell .details {
+    left: 1.25rem;
+    right: 1.25rem;
+    max-width: none;
+    top: 40%;
+  }
+
+  .product-page-shell .details h1 { font-size: 1.5rem; }
+  .product-page-shell .details p  { font-size: 0.78rem; }
+
+  .product-page-shell .thumbs {
+    right: 0.5rem;
+    bottom: 0.75rem;
+    gap: 0.5rem;
+    padding-right: 0;
+  }
+
+  .product-page-shell .thumb {
+    width: 46px;
+    height: 64px;
+    border-radius: 10px;
+  }
+
+  .product-page-shell .thumb.is-active {
+    width: 56px;
+    height: 78px;
+  }
+
+  .product-page-shell .controls button {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-page-shell .slide,
+  .product-page-shell .details,
+  .product-page-shell .thumb {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .product-page-shell .slide.is-active .details {
+    opacity: 1;
+  }
+}

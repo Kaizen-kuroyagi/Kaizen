@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>KaizenTech — Checkout</title>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -11,16 +11,20 @@
       <div class="container">
         <div class="navbar">
           <a class="logo" href="Index.html">
-            <img src="images/large.png" width="125" alt="KaizenTech">
+            <img src="Images/large.png" width="125" alt="KaizenTech">
           </a>
           <nav>
             <ul>
               <li><a href="Index.html">Home</a></li>
-              <li><a href="Purchasing page.html">Products</a></li>
+              <li><a href="Support.html">About</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+              <li><a href="product page.html">Products</a></li>
               <li><a href="electronics.html">Account</a></li>
             </ul>
           </nav>
-          <img src="images/car.png" width="30" height="30" alt="Shopping Cart">
+          <a href="Purchasing page.html" aria-label="Shopping cart">
+            <img src="Images/Car.png" width="30" height="30" alt="Shopping Cart">
+          </a>
         </div>
       </div>
     </header>
@@ -47,12 +51,12 @@
             <h2 class="payment-heading">Payment</h2>
             <div class="checkout-field">
               <label for="cardholder-name">Cardholder name</label>
-              <input id="cardholder-name" type="text" placeholder="Jane Doe">
+              <input id="cardholder-name" type="text" placeholder="???? ????">
             </div>
             <div class="checkout-fields-row">
               <div class="checkout-field">
                 <label for="card-number">Card number</label>
-                <input id="card-number" type="text" placeholder="4242 4242 4242 4242">
+                <input id="card-number" type="text" placeholder="0000 0000 0000 0000">
               </div>
               <div class="checkout-field">
                 <label for="card-exp">Exp</label>
@@ -76,6 +80,43 @@
       </div>
     </main>
 
-    <footer class="site-footer">KaizenTech © 2026</footer>
+    <footer class="site-footer">
+      <div class="small-container footer-content">
+        <div class="footer-about">
+          <h2>KaizenTech</h2>
+          <p>Improving your life through technology, one day at a time.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Support.html">About</a></li>
+            <li><a href="product page.html">Products</a></li>
+            <li><a href="electronics.html">Account</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Customer support</h3>
+          <p><a href="Contact.html">Contact us</a></p>
+          <p><a href="mailto:support@kaizentech.com">support@kaizentech.com</a></p>
+          <p class="footer-phone">
+            <img src="Images/logo phone(4).png" alt="" aria-hidden="true">
+            <a href="tel:+265881430885">+265 881 430 885</a>
+          </p>
+          <div class="footer-social" aria-label="Follow KaizenTech">
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+              <img src="Images/logo in (2).png" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/" aria-label="X">
+              <img src="Images/logo X.png" alt="X">
+            </a>
+            <a href="https://www.facebook.com/" aria-label="Meta">
+              <img src="Images/logo fb (1).png" alt="Meta">
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-copyright">KaizenTech © 2026. All rights reserved.</p>
+    </footer>
   </body>
 </html>

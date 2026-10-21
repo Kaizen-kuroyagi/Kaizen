@@ -7,72 +7,128 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-
- <div class="header">
-
-  <div class="container">
-    <div class="navbar">
-      <div class="logo">
-         <img src="images/large.png" width="125" alt="KaizenTech Logo">
-    </div>
-    <nav>
-        <ul>
-          <li><a href="Index.html">Home</a></li>
-          <li><a href="Purchasing page.html">Products</a></li>
-          <li><a href="Support.html">About</a></li>
-          <li><a href="Contact.html">Contact</a></li>
-          <li><a href="electronics.html">Account</a></li>
-        </ul>
-    </nav>
-    <img src="images/car.png" width="30" height="30" alt="Shopping Cart">
-  </div>  
-  <div class="row">
-      <div class="col-2">
-        <h1>Welcome to<br>KaizenTech!</h1>
-        <p>Improving Your Life Through Technology<br>One Day At A Time.</p>
-        <a href="" class="btn">Explore now &#8594;</a>
-      </div>
-        <div class="col-2">
-            <img src="images/iphone.png" width="100%" alt="Featured smartphone">
+    <header class="header">
+      <div class="container">
+        <div class="navbar">
+          <a class="logo" href="Index.html" aria-label="KaizenTech home">
+            <img src="Images/large.png" width="125" alt="KaizenTech Logo">
+          </a>
+          <nav>
+            <ul>
+              <li><a href="Index.html">Home</a></li>
+              <li><a href="Support.html">About</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+              <li><a href="product page.html">Products</a></li>
+              <li><a href="electronics.html">Account</a></li>
+            </ul>
+          </nav>
+          <a href="Purchasing page.html" aria-label="Shopping cart">
+            <img src="Images/Car.png" width="30" height="30" alt="Shopping Cart">
+          </a>
         </div>
-  </div>
 
-</div>
-<!--CATEGORIES--> 
- <div class="categories">
-  <div class="small-container">
-    <h1>Categories</h1>
-    <p>Explore our wide range of products and find the perfect fit for your needs.</p>
-  </div>
-  <div class="row">
-    <div class="col-3">
-      <img src="images/Android.png" alt="iPhone" width="100%">
-      <h2>Smartphones</h2>
-      <p>Discover the latest smartphones with cutting-edge technology and sleek designs.</p>
-    </div>
-    <div class="col-3">
-      <img src="images/Laptop .png" alt="Laptop" width="100%"> 
-      <h2>Laptops</h2>
-      <p>Find powerful laptops for work, gaming, and everything in between.</p>
-    </div>
-    <div class="col-3">
-      <img src="images/Gaming Headphones .png" alt="Headphones" width="100%">
-      <h2>Audio</h2>
-      <p>Experience high-quality sound with our range of headphones and speakers.</p>
-    </div>
-  </div>
- </div>
-
-<!--Products Section--> 
- <div class="small-container">
-   <h1>Featured Products</h1>
-    <div class="row">
-      <div class="col-4">
-        <img src="images/product-1.png" alt="Product 1">
-         <h4>Product 1</h4>
-          <p>$99.99</p>
+        <div class="row">
+          <div class="col-2">
+            <h1>Welcome to<br>KaizenTech!</h1>
+            <p>Improving Your Life Through Technology<br>One Day At A Time.</p>
+            <a href="Purchasing page.html" class="btn">Explore now &#8594;</a>
+          </div>
+          <div class="col-2">
+            <img src="Images/iphone.png" width="100%" alt="Featured smartphone">
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</body>
+    </header>
+
+    <main>
+      <section class="categories">
+        <div class="small-container">
+          <h1>Categories</h1>
+          <p>Explore our wide range of products and find the perfect fit for your needs.</p>
+        </div>
+        <div class="small-container row">
+          <div class="col-3">
+            <img src="Images/Android.png" alt="Smartphone" width="100%">
+            <h2>Smartphones</h2>
+            <p>Discover the latest smartphones with cutting-edge technology and sleek designs.</p>
+          </div>
+          <div class="col-3">
+            <img src="Images/Laptop .png" alt="Laptop" width="100%">
+            <h2>Laptops</h2>
+            <p>Find powerful laptops for work, gaming, and everything in between.</p>
+          </div>
+          <div class="col-3">
+            <img src="Images/Gaming Headphones .png" alt="Headphones" width="100%">
+            <h2>Audio</h2>
+            <p>Experience high-quality sound with our range of headphones and speakers.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="small-container featured-products">
+        <h1>Featured Products</h1>
+        <div class="row">
+          <div class="col-4">
+            <img src="Images/Note 22.png" alt="Note 22">
+            <h4>Note 22</h4>
+            <p>$899.99</p>
+          </div>
+          <div class="col-4">
+            <img src="Images/logo.png" alt="KaizenTech laptop">
+            <h4>KaizenBook Pro</h4>
+            <p>$1,299.99</p>
+          </div>
+          <div class="col-4">
+            <img src="Images/Gaming Headphones .png" alt="Gaming headset">
+            <h4>Pulse Audio</h4>
+            <p>$149.99</p>
+          </div>
+          <div class="col-4">
+            <img src="Images/Android.png" alt="Android smartphone">
+            <h4>ZenPhone X</h4>
+            <p>$699.99</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="small-container footer-content">
+        <div class="footer-about">
+          <h2>KaizenTech</h2>
+          <p>Improving your life through technology, one day at a time.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Support.html">About</a></li>
+            <li><a href="product page.html">Products</a></li>
+            <li><a href="electronics.html">Account</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Customer support</h3>
+          <p><a href="Contact.html">Contact us</a></p>
+          <p><a href="mailto:support@kaizentech.com">support@kaizentech.com</a></p>
+          <p class="footer-phone">
+            <img src="Images/logo phone(4).png" alt="" aria-hidden="true">
+            <a href="tel:+265881430885">+265 881 430 885</a>
+          </p>
+          <div class="footer-social" aria-label="Follow KaizenTech">
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+              <img src="Images/logo in (2).png" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/" aria-label="X">
+              <img src="Images/logo X.png" alt="X">
+            </a>
+            <a href="https://www.facebook.com/" aria-label="Meta">
+              <img src="Images/logo fb (1).png" alt="Meta">
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-copyright">KaizenTech © 2026. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
